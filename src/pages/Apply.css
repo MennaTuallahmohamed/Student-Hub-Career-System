@@ -1,0 +1,183 @@
+
+.job-application-page {
+    background-color: #f9fafb;
+    min-height: 100vh;
+    padding: 3rem 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #555;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: #007bff;
+}
+
+.application-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.job-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem; /* row-gap column-gap */
+    color: #666;
+    margin-bottom: 1rem; /* Adjusted margin */
+}
+
+.job-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* --- NEW STYLE for Tech Stack --- */
+.job-tech {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #333;
+    background-color: #f8f9fa;
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 2.5rem;
+    border: 1px solid #eee;
+}
+
+.job-tech strong {
+    font-weight: 600;
+}
+
+
+
+.ApplyFormsection h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.ApplyFormgrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .ApplyFormgrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.ApplyFormgroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.ApplyFormgroup label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.ApplyFormgroup input[type="text"],
+.ApplyFormgroup input[type="email"],
+.ApplyFormgroup input[type="tel"],
+.ApplyFormgroup textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.ApplyFormgroup input:focus,
+.ApplyFormgroup textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.file-upload-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.3s, background-color 0.3s;
+    background-color: #f9f9f9;
+}
+
+.file-upload-label:hover {
+    border-color: #007bff;
+    background-color: #f0f7ff;
+}
+
+.file-instructions {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 0.5rem;
+}
+
+.error-text {
+    color: #d93025;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.ApplyFormactions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit-button {
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.submit-button:disabled {
+    background-color: #a0c3e6;
+    cursor: not-allowed;
+}
+
+.success-message {
+    text-align: center;
+    padding: 2rem;
+}
+
+.success-icon {
+    color: #28a745;
+    margin-bottom: 1rem;
+}

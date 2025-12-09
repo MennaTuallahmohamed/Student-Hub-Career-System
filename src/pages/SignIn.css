@@ -1,0 +1,230 @@
+/* --- GLOBAL STYLES & "CLASSIC MODERN" PALETTE --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #3a25ff;
+  --primary-hover: #3120d9;
+  --background-color: #FFFFFF;
+  --visual-panel-bg: #ffffff;
+  --text-dark: #111827;
+  --text-light: #6B7280;
+  --border-color: #ffffff;
+  --font-family: 'Poppins', sans-serif;
+}
+/* User Type Radio Group */
+.user-type-group {
+  margin-top: 20px;
+}
+
+.user-type-label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+}
+
+.radio-option input[type="radio"] {
+  accent-color: #3a25ff; /* purple theme color */
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- MAIN PAGE LAYOUT --- */
+.auth-page-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* --- LEFT VISUAL PANEL --- */
+.visual-panel {
+  background-color: var(--visual-panel-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+.visual-content {
+  max-width: 480px;
+  text-align: center;
+}
+
+.visual-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.visual-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 3rem;
+}
+
+.auth-illustration {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  animation: float 6s ease-in-out infinite; /* Trendy floating animation */
+}
+
+/* --- RIGHT FORM PANEL --- */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 400px;
+  /* Card styles from previous design are largely the same */
+  background-color:white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+}
+
+/* --- FORM ELEMENTS (Consistent with Register page) --- */
+.form-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.form-message {
+  color: var(--text-light);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(58, 37, 255, 0.2);
+}
+.submit-btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(58, 37, 255, 0.25);
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #9CA3AF;
+  pointer-events: none;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 12px 12px 45px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--text-dark);
+  background-color: var(--background-color);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+.input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(58, 37, 255, 0.1);
+}
+
+.signin-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+.signin-link a {
+  color: var(--primary-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+.signin-link a:hover {
+  text-decoration: underline;
+}
+
+/* --- FLOATING ANIMATION --- */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* --- RESPONSIVE DESIGN FOR MOBILE --- */
+@media (max-width: 960px) {
+  .auth-page-container {
+    grid-template-columns: 1fr; /* Stack the columns */
+  }
+  .visual-panel {
+    display: none; /* Hide the image on mobile to focus on the form */
+  }
+  .form-container {
+    align-items: flex-start;
+    padding-top: 4rem;
+  }
+}

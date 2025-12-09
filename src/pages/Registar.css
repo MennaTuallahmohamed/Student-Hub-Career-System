@@ -1,0 +1,218 @@
+/* --- GLOBAL STYLES & VARIABLES --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #3a52ff;
+  --primary-hover: #3146d9;
+  --background-color: #ffffff;
+  --panel-background: #FFFFFF;
+  --text-dark: #1F2937;
+  --text-light: #6B7280;
+  --border-color: #ffffff;
+  --font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+}
+
+/* --- MAIN LAYOUT CONTAINER --- */
+.auth-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* --- LEFT BRANDING PANEL --- */
+.info-panel {
+  background-color: #ffffff; /* A very light, inviting blue */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  text-align: center;
+}
+
+.info-content {
+  max-width: 450px;
+}
+
+.info-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.info-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.auth-illustration {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+/* --- RIGHT FORM PANEL --- */
+.form-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--panel-background);
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.form-message {
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+/* --- BUTTONS --- */
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--panel-background);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.google-btn:hover {
+  background-color: var(--background-color);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.submit-btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+/* --- DIVIDER --- */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--text-light);
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--border-color);
+}
+.divider:not(:empty)::before { margin-right: .5em; }
+.divider:not(:empty)::after { margin-left: .5em; }
+
+/* --- FORM GROUPS & INPUTS --- */
+.name-flex {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+.name-flex .form-group {
+  flex: 1;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: var(--text-light);
+  pointer-events: none; /* Make icon unclickable */
+}
+
+.input {
+  width: 100%;
+  padding: 12px 12px 12px 45px; /* Left padding for icon */
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--text-dark);
+  background-color: var(--panel-background);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(58, 82, 255, 0.2);
+}
+.input::placeholder {
+  color: var(--text-light);
+}
+
+/* --- SIGNIN LINK --- */
+.signin-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--text-light);
+}
+.signin-link a {
+  color: var(--primary-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+.signin-link a:hover {
+  text-decoration: underline;
+}
+
+/* --- RESPONSIVE DESIGN FOR MOBILE --- */
+@media (max-width: 900px) {
+  .auth-container {
+    grid-template-columns: 1fr;
+  }
+  .info-panel {
+    display: none; /* Hide the info panel on mobile to focus on the form */
+  }
+  .form-panel {
+    padding: 1.5rem;
+  }
+}
