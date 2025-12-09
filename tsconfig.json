@@ -2,8 +2,10 @@
   "compilerOptions": {
     "target": "es2016",
     "module": "esnext",
-    "jsx": "react-jsx", 
+    "jsx": "react-jsx",
     "moduleResolution": "node",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,

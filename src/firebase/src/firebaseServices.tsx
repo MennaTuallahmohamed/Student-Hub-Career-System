@@ -449,6 +449,12 @@ export const CourseService = {
     return snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() } as CourseData));
   },
 
+  getMyCourses: async (teacherId: string) => {
+    const q = query(collection(db, 'courses'), where('teacherId', '==', teacherId));
+    const snapshot = await getDocs(q);
+    return snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() } as CourseData));
+  },
+
 
   // ✅ الدالة الجديدة المطلوبة: تعديل الكورس من المدرس اللي رفعه فقط
   updateCourse: async (courseId: string, updatedData: Partial<CourseData>, userId: string) => {
